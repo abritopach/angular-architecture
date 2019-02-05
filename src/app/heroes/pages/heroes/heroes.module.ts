@@ -4,9 +4,11 @@ import { RouterModule } from '@angular/router';
 
 import { HeroesComponent } from './heroes.component';
 
+import { HeroesListComponent } from '../../../components/heroes-list/heroes-list.component';
+
 @NgModule({
   imports: [
-  CommonModule,
+CommonModule,
   RouterModule.forChild([
     {
       path: '',
@@ -14,6 +16,7 @@ import { HeroesComponent } from './heroes.component';
     }
   ]),
   ],
-  declarations: [HeroesComponent]
+  declarations: [HeroesComponent, HeroesListComponent],
+  entryComponents: [HeroesListComponent]
 })
 export class HeroesPageModule {}
