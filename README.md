@@ -15,25 +15,27 @@ This project is based on the following fundamentals:
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.0.
 
+Although design is not the main objective of this project I have decided to use [Angular Material](https://material.angular.io/).
+
 ## Project Architecture
 
 // TODO: Complete architecture. Status: under development.
 
-app/
-|- app-routing.module.ts
-|- app-component.css
-|- app-component.html
-|- app-component.ts
-|- app.module.ts
-|- core/
-|- ui/
-|- heroes/
-    |- pages/
-        |- heroes/
-            |- heroes.component.css
-            |- heroes.component.html
-            |- heroes.component.ts
-            |- heroes.module.ts
+    * app/
+    *   |- app-routing.module.ts
+    *   |- app-component.css
+    *   |- app-component.html
+    *   |- app-component.ts
+    *   |- app.module.ts
+    *   |- core/
+    *   |- ui/
+    *   |- heroes/
+    *       |- pages/
+    *           |- heroes/
+    *               |- heroes.component.css
+    *               |- heroes.component.html
+    *               |- heroes.component.ts
+    *               |- heroes.module.ts
 
 ## Development server
 
