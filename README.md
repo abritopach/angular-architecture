@@ -1,6 +1,39 @@
 # AngularArchitecture
 
+This project aims to serve as a base / reference when considering a possible architecture in an Angular project.
+
+Probably the proposed architecture is not the perfect solution for all projects.
+
+I have mainly followed the recommendations proposed by the Angular documentation.
+
+This project is based on the following fundamentals:
+
+    * Consistency: simplicity (for small apps) and scalability (for big apps).
+    * Reusability in different projects.
+    * Optimization (consistent with or without lazy-loading).
+    * Testability.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.0.
+
+## Project Architecture
+
+// TODO: Complete architecture. Status: under development.
+
+app/
+|- app-routing.module.ts
+|- app-component.css
+|- app-component.html
+|- app-component.ts
+|- app.module.ts
+|- core/
+|- ui/
+|- heroes/
+    |- pages/
+        |- heroes/
+            |- heroes.component.css
+            |- heroes.component.html
+            |- heroes.component.ts
+            |- heroes.module.ts
 
 ## Development server
 
