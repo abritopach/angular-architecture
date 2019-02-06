@@ -1,11 +1,17 @@
 import { Injectable } from '@angular/core';
 
+/**
+ * Provider for get heroes and hero detail.
+ */
 @Injectable({
   providedIn: 'root'
 })
 export class HeroesService {
 
-  // Get from https://github.com/akabab/superhero-api/blob/master/api/all.json
+  /**
+   * Heroes array
+   * Get from https://github.com/akabab/superhero-api/blob/master/api/all.json
+   */
   heroes = [
     {
       "id": 1,
@@ -30289,16 +30295,34 @@ export class HeroesService {
     }
   ]
 
+  /**
+   * @ignore
+   */
   constructor() {
       console.log('HeroesService::constructor() | method called');
   }
 
-  // Simulate GET /heroes.
+  /**
+   * Simulate GET /heroes.
+   *
+   * @example
+   * Simple call
+   * getAllHeroes
+   * @returns All Heroes.
+   */
   getAllHeroes() {
     return this.heroes;
   }
 
-  // Simulate GET /heroes/:id
+  /**
+   * Simulate GET /heroes/:id
+   *
+   * @example
+   * Simple call
+   * getHeroesById(300)
+   * @param {number} id Hero ID
+   * @returns Hero that matches the id specified as parameter.
+   */
   getHeroeById(id: number) {
     return this.heroes
       .filter(heroe => heroe.id === id)
