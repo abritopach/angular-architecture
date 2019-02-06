@@ -31,6 +31,18 @@ Although design is not the main objective of this project I have decided to use 
     *   |- ui/
     *       |- material/
     *           |- material.module.ts
+    *   |- common/
+    *       |- components/
+    *           |- header/
+    *               |- header.component.css
+    *               |- header.component.html
+    *               |- header.component.spec.ts
+    *               |- header.component.ts
+    *           |- footer/
+    *               |- footer.component.css
+    *               |- footer.component.html
+    *               |- footer.component.spec.ts
+    *               |- footer.component.ts
     *   |- heroes/
     *       |- pages/
     *           |- heroes/

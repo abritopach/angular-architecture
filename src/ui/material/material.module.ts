@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 
 // Angular Material Components.
-import { MatListModule, MatLineModule } from '@angular/material';
+import { MatListModule, MatLineModule, MatToolbarModule, MatSidenavModule, MatSlideToggleModule } from '@angular/material';
 
 @NgModule({
-  imports: [MatListModule, MatLineModule],
-  exports: [MatListModule, MatLineModule]
+  imports: [MatListModule, MatLineModule, MatToolbarModule, MatSidenavModule, MatSlideToggleModule],
+  exports: [MatListModule, MatLineModule, MatToolbarModule, MatSidenavModule, MatSlideToggleModule]
 })
 export class MyCustomMaterialModule {}
