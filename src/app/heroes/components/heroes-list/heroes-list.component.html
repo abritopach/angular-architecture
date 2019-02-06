@@ -1,0 +1,10 @@
+<mat-list>
+  <mat-list-item *ngFor="let heroe of heroes">
+    <img matListAvatar [src]="heroe.images.lg" alt="Heroe image">
+    <h3 matLine> {{heroe.name}} </h3>
+    <p matLine>
+      <span> {{heroe.biography.fullName}} </span>
+      <span class="demo-2"> -- {{heroe.biography.placeOfBirth}} </span>
+    </p>
+  </mat-list-item>
+</mat-list>

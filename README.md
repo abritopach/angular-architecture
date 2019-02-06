@@ -29,6 +29,8 @@ Although design is not the main objective of this project I have decided to use 
     *   |- app.module.ts
     *   |- core/
     *   |- ui/
+    *       |- material/
+    *           |- material.module.ts
     *   |- heroes/
     *       |- pages/
     *           |- heroes/
@@ -36,6 +38,11 @@ Although design is not the main objective of this project I have decided to use 
     *               |- heroes.component.html
     *               |- heroes.component.ts
     *               |- heroes.module.ts
+    *       |- components/
+    *           |- heroes-list.component.css
+    *           |- heroes-list.component.html
+    *           |- heroes-list.component.spec.ts
+    *           |- heroes-list.component.ts
 
 ## Development server
 
