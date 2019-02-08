@@ -44,17 +44,30 @@ Although design is not the main objective of this project I have decided to use 
     *               |- footer.component.spec.ts
     *               |- footer.component.ts
     *   |- heroes/
+    *       |- components/
+    *           |- hero-details/
+    *               |- hero-details.component.css
+    *               |- hero-details.component.html
+    *               |- hero-details.component.spec.ts
+    *               |- hero-details.component.ts
+    *           |- heroes-list/
+    *               |- heroes-list.component.css
+    *               |- heroes-list.component.html
+    *               |- heroes-list.component.spec.ts
+    *               |- heroes-list.component.ts
     *       |- pages/
+    *           |- hero/
+    *               |- hero.component.css
+    *               |- hero.component.html
+    *               |- hero.component.spec.ts
+    *               |- hero.component.ts
+    *               |- hero.module.ts
     *           |- heroes/
     *               |- heroes.component.css
     *               |- heroes.component.html
+    *               |- heroes.component.spec.ts
     *               |- heroes.component.ts
     *               |- heroes.module.ts
-    *       |- components/
-    *           |- heroes-list.component.css
-    *           |- heroes-list.component.html
-    *           |- heroes-list.component.spec.ts
-    *           |- heroes-list.component.ts
 
 ## Development server
 

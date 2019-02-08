@@ -1,10 +1,10 @@
 <mat-list>
-  <mat-list-item *ngFor="let heroe of heroes">
-    <img matListAvatar [src]="heroe.images.lg" alt="Heroe image">
-    <h3 matLine> {{heroe.name}} </h3>
+  <mat-list-item *ngFor="let hero of heroes" routerLink="/hero/{{ hero.id }}">
+    <img matListAvatar [src]="hero.images.lg" alt="Hero image">
+    <h3 matLine> {{hero.name}} </h3>
     <p matLine>
-      <span> {{heroe.biography.fullName}} </span>
-      <span class="demo-2"> -- {{heroe.biography.placeOfBirth}} </span>
+      <span> {{hero.biography.fullName}} </span>
+      <span class="demo-2"> -- {{hero.biography.placeOfBirth}} </span>
     </p>
   </mat-list-item>
 </mat-list>
