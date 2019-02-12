@@ -1,3 +1,17 @@
+<cdk-virtual-scroll-viewport itemSize="80">
+    <mat-list>
+      <mat-list-item *cdkVirtualFor="let hero of heroes" routerLink="/hero/{{ hero.id }}">
+        <img matListAvatar [src]="hero.images.lg" alt="Hero image">
+        <h3 matLine> {{hero.name}} </h3>
+        <p matLine>
+          <span> {{hero.biography.fullName}} </span>
+          <span class="demo-2"> -- {{hero.biography.placeOfBirth}} </span>
+        </p>
+      </mat-list-item>
+    </mat-list>
+</cdk-virtual-scroll-viewport>
+
+<!--
 <mat-list>
   <mat-list-item *ngFor="let hero of heroes" routerLink="/hero/{{ hero.id }}">
     <img matListAvatar [src]="hero.images.lg" alt="Hero image">
@@ -8,3 +22,4 @@
     </p>
   </mat-list-item>
 </mat-list>
+-->
