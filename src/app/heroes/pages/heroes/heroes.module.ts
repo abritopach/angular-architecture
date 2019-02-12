@@ -7,17 +7,20 @@ import { HeroesComponent } from './heroes.component';
 import { HeroesListComponent } from '../../components/heroes-list/heroes-list.component';
 import { MyCustomMaterialModule } from 'src/ui/material/material.module';
 
+import { SharedComponentsModule } from '../../../common/shared-components.module';
+
 
 @NgModule({
   imports: [
-    CommonModule,
+  CommonModule,
     RouterModule.forChild([
       {
         path: '',
         component: HeroesComponent
       }
     ]),
-    MyCustomMaterialModule
+    MyCustomMaterialModule,
+    SharedComponentsModule
   ],
   declarations: [HeroesComponent, HeroesListComponent],
   entryComponents: [HeroesListComponent]

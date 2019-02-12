@@ -1,3 +1,6 @@
 <mat-toolbar color="primary">
-  <span>Heroes</span>
+  <ng-content select="[buttons-start]"></ng-content>
+  <span>{{ title }}</span>
+  <span class="toolbar-spacer"></span>
+  <ng-content select="[buttons-end]"></ng-content>
 </mat-toolbar>

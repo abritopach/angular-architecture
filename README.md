@@ -43,6 +43,7 @@ Although design is not the main objective of this project I have decided to use 
     *               |- footer.component.html
     *               |- footer.component.spec.ts
     *               |- footer.component.ts
+    *       |- shared-components.module.ts
     *   |- heroes/
     *       |- components/
     *           |- hero-details/

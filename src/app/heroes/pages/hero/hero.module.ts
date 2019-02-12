@@ -7,6 +7,8 @@ import { HeroComponent } from './hero.component';
 import { HeroDetailsComponent } from '../../components/hero-details/hero-details.component';
 import { MyCustomMaterialModule } from 'src/ui/material/material.module';
 
+import { SharedComponentsModule } from '../../../common/shared-components.module';
+
 
 @NgModule({
   imports: [
@@ -17,7 +19,8 @@ import { MyCustomMaterialModule } from 'src/ui/material/material.module';
         component: HeroComponent
       }
     ]),
-    MyCustomMaterialModule
+    MyCustomMaterialModule,
+    SharedComponentsModule
   ],
   declarations: [HeroComponent, HeroDetailsComponent],
   entryComponents: [HeroDetailsComponent]
