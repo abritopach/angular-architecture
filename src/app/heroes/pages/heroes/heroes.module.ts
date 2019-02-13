@@ -5,14 +5,16 @@ import { RouterModule } from '@angular/router';
 import { HeroesComponent } from './heroes.component';
 
 import { HeroesListComponent } from '../../components/heroes-list/heroes-list.component';
-import { MyCustomMaterialModule } from 'src/ui/material/material.module';
+import { MyCustomMaterialModule } from '../../../ui/material/material.module';
+import { CarouselComponent } from '../../../ui/carousel/carousel/carousel.component';
+import { CarouselModule } from '../../../ui/carousel/carousel/carousel.component.module';
 
 import { SharedComponentsModule } from '../../../common/shared-components.module';
 
 
 @NgModule({
   imports: [
-  CommonModule,
+CommonModule,
     RouterModule.forChild([
       {
         path: '',
@@ -20,9 +22,10 @@ import { SharedComponentsModule } from '../../../common/shared-components.module
       }
     ]),
     MyCustomMaterialModule,
-    SharedComponentsModule
+    SharedComponentsModule,
+    CarouselModule
   ],
-  declarations: [HeroesComponent, HeroesListComponent],
-  entryComponents: [HeroesListComponent]
+  declarations: [HeroesComponent, HeroesListComponent, CarouselComponent],
+  entryComponents: [HeroesListComponent, CarouselComponent]
 })
 export class HeroesPageModule {}

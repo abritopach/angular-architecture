@@ -10,8 +10,11 @@ import { HeroesService } from '../../../services/heroes/heroes.services';
 export class HeroesComponent implements OnInit {
 
   heroes: any = [];
+  showCarousel = false;
 
   constructor(private heroesService: HeroesService) { }
+
+  // https://medium.com/@cyrilletuzi/architecture-in-angular-projects-242606567e40
 
   ngOnInit() {
     this.heroes = this.heroesService.getAllHeroes();

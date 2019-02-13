@@ -5,14 +5,14 @@ import { RouterModule } from '@angular/router';
 import { HeroComponent } from './hero.component';
 
 import { HeroDetailsComponent } from '../../components/hero-details/hero-details.component';
-import { MyCustomMaterialModule } from 'src/ui/material/material.module';
+import { MyCustomMaterialModule } from '../../../ui/material/material.module';
 
 import { SharedComponentsModule } from '../../../common/shared-components.module';
 
 
 @NgModule({
   imports: [
-  CommonModule,
+CommonModule,
     RouterModule.forChild([
       {
         path: '',

@@ -1,3 +1,11 @@
-<app-header title="Heroes"></app-header>
+<app-header title="Heroes">
+    <div buttons-end>
+        <button mat-icon-button (click)="showCarousel = !showCarousel">
+            <mat-icon class="example-icon">perm_media</mat-icon>
+        </button>
+    </div>
+</app-header>
 
-<app-heroes-list [heroes]="heroes"></app-heroes-list>
+<app-carousel *ngIf="showCarousel"></app-carousel>
+
+<app-heroes-list [heroes]="heroes" *ngIf="!showCarousel"></app-heroes-list>

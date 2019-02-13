@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MyCustomMaterialModule } from '../ui/material/material.module';
+import { MyCustomMaterialModule } from './ui/material/material.module';
 import { FooterComponent } from './common/components/footer/footer.component';
 
 @NgModule({
@@ -14,7 +14,7 @@ import { FooterComponent } from './common/components/footer/footer.component';
     FooterComponent
   ],
   imports: [
-    BrowserModule,
+  BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MyCustomMaterialModule

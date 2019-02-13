@@ -31,6 +31,12 @@ Although design is not the main objective of this project I have decided to use 
     *   |- ui/
     *       |- material/
     *           |- material.module.ts
+    *       |- carousel/
+    *          |- carousel.component.css
+    *          |- carousel.component.html
+    *          |- carousel.component.module.ts
+    *          |- carousel.component.spec.ts
+    *          |- carousel.component.ts
     *   |- common/
     *       |- components/
     *           |- header/

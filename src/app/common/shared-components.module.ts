@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { HeaderComponent } from './components/header/header.component';
-import { MyCustomMaterialModule } from '../../ui/material/material.module';
+import { MyCustomMaterialModule } from '../ui/material/material.module';
 
 @NgModule({
   declarations: [HeaderComponent],
   imports: [
-    CommonModule,
+  CommonModule,
     MyCustomMaterialModule
   ],
   exports: [HeaderComponent]
