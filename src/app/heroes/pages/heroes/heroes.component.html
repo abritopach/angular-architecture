@@ -6,6 +6,6 @@
     </div>
 </app-header>
 
-<app-carousel *ngIf="showCarousel"></app-carousel>
+<app-carousel [heroes]="heroes" *ngIf="showCarousel"></app-carousel>
 
 <app-heroes-list [heroes]="heroes" *ngIf="!showCarousel"></app-heroes-list>

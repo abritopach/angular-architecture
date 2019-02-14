@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-carousel',
@@ -7,13 +7,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarouselComponent implements OnInit {
 
-  imageUrlArray = ['https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/images/lg/1-a-bomb.jpg',
-                   'https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/images/lg/2-abe-sapien.jpg'];
+  imageUrlArray = [];
+  @Input()
+  heroes: any[] = [];
+
+  @ViewChild('slideshow') slideshow: any;
 
   constructor() { }
 
   ngOnInit() {
-    console.log('CarouselComponent::ngOnInit() | method called');
+    console.log('CarouselComponent::ngOnInit() | method called', this.heroes);
+    this.heroes.map(hero => this.imageUrlArray.push(hero.images.lg));
+  }
+
+  onSlideLeft() {
+    // console.log('CarouselComponent::onSlideLeft() | method called');
+    // console.log(this.slideshow.slideIndex);
+  }
+
+  onSlideRight() {
+    // console.log('CarouselComponent::onSlideRight() | method called');
+    // console.log(this.slideshow.slideIndex);
   }
 
 }

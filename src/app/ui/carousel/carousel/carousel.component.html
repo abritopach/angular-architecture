@@ -1,1 +1,15 @@
-<slideshow height="400px" [imageUrls]="imageUrlArray"></slideshow>
+<mat-card class="cardHero">
+    <mat-card-header>
+      <mat-card-title> {{heroes[slideshow.slideIndex].name}} </mat-card-title>
+    </mat-card-header>
+    <slideshow #slideshow height="400px" [imageUrls]="imageUrlArray" (onSlideLeft)="onSlideLeft()" (onSlideRight)="onSlideRight()"></slideshow>
+    <mat-card-content>
+    <br>
+      <p>
+        Lorem ipsum dolor sit amet, his nisl omnis habeo id, offendit repudiare te his. Mazim melius delectus ea mei.
+        Sit id nominati consequat. Civibus denique eos no, qui et habeo evertitur. Sit eu albucius deterruisset, ullum
+        accommodare at pri. Qui an ignota quidam theophrastus, usu iisque necessitatibus ea. Dicat inciderint no duo,
+        purto vivendum perfecto qui cu, et nec erat possit evertitur.
+      </p>
+    </mat-card-content>
+</mat-card>
