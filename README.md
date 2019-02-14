@@ -15,7 +15,7 @@ This project is based on the following fundamentals:
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.0.
 
-Although design is not the main objective of this project I have decided to use [Angular Material](https://material.angular.io/).
+Although design is not the main objective of this project I have decided to use [Angular Material](https://material.angular.io/) and [Angular Flex Layout](https://github.com/angular/flex-layout).
 
 ## Project Architecture
 
@@ -29,14 +29,16 @@ Although design is not the main objective of this project I have decided to use 
     *   |- app.module.ts
     *   |- core/
     *   |- ui/
-    *       |- material/
-    *           |- material.module.ts
     *       |- carousel/
     *          |- carousel.component.css
     *          |- carousel.component.html
     *          |- carousel.component.module.ts
     *          |- carousel.component.spec.ts
     *          |- carousel.component.ts
+    *       |- flex-layout/
+    *           |- flex-layout.module.ts
+    *       |- material/
+    *           |- material.module.ts
     *   |- common/
     *       |- components/
     *           |- header/

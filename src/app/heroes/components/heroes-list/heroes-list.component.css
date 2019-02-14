@@ -1,3 +1,7 @@
 cdk-virtual-scroll-viewport {
     height: 85vh;
 }
+
+mat-icon {
+    order: 10;
+}
