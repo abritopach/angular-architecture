@@ -9,6 +9,7 @@ import { MyCustomMaterialModule } from '../../../ui/material/material.module';
 
 import { SharedComponentsModule } from '../../../common/shared-components.module';
 
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   imports: [
@@ -20,7 +21,8 @@ CommonModule,
       }
     ]),
     MyCustomMaterialModule,
-    SharedComponentsModule
+    SharedComponentsModule,
+    FlexLayoutModule
   ],
   declarations: [HeroComponent, HeroDetailsComponent],
   entryComponents: [HeroDetailsComponent]

@@ -1,15 +1,4 @@
-.cardHero {
-    max-width: 400px;
-}
-
 .cardHeaderImage {
     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
     background-size: cover;
-}
-
-.cardDiv{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }

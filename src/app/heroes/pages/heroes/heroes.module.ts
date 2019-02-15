@@ -11,6 +11,8 @@ import { CarouselModule } from '../../../ui/carousel/carousel/carousel.component
 
 import { SharedComponentsModule } from '../../../common/shared-components.module';
 
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 
 @NgModule({
   imports: [
@@ -23,7 +25,8 @@ CommonModule,
     ]),
     MyCustomMaterialModule,
     SharedComponentsModule,
-    CarouselModule
+    CarouselModule,
+    FlexLayoutModule
   ],
   declarations: [HeroesComponent, HeroesListComponent, CarouselComponent],
   entryComponents: [HeroesListComponent, CarouselComponent]

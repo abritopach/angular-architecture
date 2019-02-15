@@ -14,7 +14,7 @@ import { FooterComponent } from './common/components/footer/footer.component';
     FooterComponent
   ],
   imports: [
-  BrowserModule,
+    BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MyCustomMaterialModule

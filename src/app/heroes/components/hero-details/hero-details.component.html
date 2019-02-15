@@ -1,23 +1,28 @@
-<div class="cardDiv">
-  <mat-card class="cardHero">
-    <mat-card-header>
-      <div mat-card-avatar class="cardHeaderImage"
-      [ngStyle]="{background: 'url(' + hero.images.xs + ')'}"></div>
-      <mat-card-title> {{hero.biography.fullName}} </mat-card-title>
-      <mat-card-subtitle> {{hero.biography.publisher}} </mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image [src]="hero.images.lg" alt="Photo of hero">
-    <mat-card-content>
-      <p>
-        Lorem ipsum dolor sit amet, his nisl omnis habeo id, offendit repudiare te his. Mazim melius delectus ea mei.
-        Sit id nominati consequat. Civibus denique eos no, qui et habeo evertitur. Sit eu albucius deterruisset, ullum
-        accommodare at pri. Qui an ignota quidam theophrastus, usu iisque necessitatibus ea. Dicat inciderint no duo,
-        purto vivendum perfecto qui cu, et nec erat possit evertitur.
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
-  </mat-card>
-</div>
+
+<mat-card>
+  <div fxLayout="row">
+      <div fxFlex="20"></div>
+      <div fxFlex="60">
+        <mat-card-header>
+          <div mat-card-avatar class="cardHeaderImage"
+          [ngStyle]="{background: 'url(' + hero.images.xs + ')'}"></div>
+          <mat-card-title> {{hero.biography.fullName}} </mat-card-title>
+          <mat-card-subtitle> {{hero.biography.publisher}} </mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="hero.images.lg" alt="Photo of hero">
+        <mat-card-content>
+          <p>
+            Lorem ipsum dolor sit amet, his nisl omnis habeo id, offendit repudiare te his. Mazim melius delectus ea mei.
+            Sit id nominati consequat. Civibus denique eos no, qui et habeo evertitur. Sit eu albucius deterruisset, ullum
+            accommodare at pri. Qui an ignota quidam theophrastus, usu iisque necessitatibus ea. Dicat inciderint no duo,
+            purto vivendum perfecto qui cu, et nec erat possit evertitur.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </div>
+      <div fxFlex="20"></div>
+    </div>
+</mat-card>

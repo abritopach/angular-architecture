@@ -1,15 +1,54 @@
 <mat-card>
-    <mat-card-header>
-      <mat-card-title> {{heroes[slideshow.slideIndex].name}} </mat-card-title>
-    </mat-card-header>
-    <slideshow #slideshow height="400px" [imageUrls]="imageUrlArray" (onSlideLeft)="onSlideLeft()" (onSlideRight)="onSlideRight()"></slideshow>
-    <mat-card-content>
-    <br>
-      <p>
-        Lorem ipsum dolor sit amet, his nisl omnis habeo id, offendit repudiare te his. Mazim melius delectus ea mei.
-        Sit id nominati consequat. Civibus denique eos no, qui et habeo evertitur. Sit eu albucius deterruisset, ullum
-        accommodare at pri. Qui an ignota quidam theophrastus, usu iisque necessitatibus ea. Dicat inciderint no duo,
-        purto vivendum perfecto qui cu, et nec erat possit evertitur.
-      </p>
-    </mat-card-content>
+    <div fxLayout="row">
+    <div fxFlex="20"></div>
+    <div fxFlex="60">
+        <mat-card-header>
+            <mat-card-title> {{heroes[slideshow.slideIndex].name}} </mat-card-title>
+          </mat-card-header>
+          <slideshow #slideshow height="400px" [imageUrls]="imageUrlArray" (onSlideLeft)="onSlideLeft()" (onSlideRight)="onSlideRight()"></slideshow>
+          <mat-card-content>
+          <br>
+            <p>
+              Lorem ipsum dolor sit amet, his nisl omnis habeo id, offendit repudiare te his. Mazim melius delectus ea mei.
+              Sit id nominati consequat. Civibus denique eos no, qui et habeo evertitur. Sit eu albucius deterruisset, ullum
+              accommodare at pri. Qui an ignota quidam theophrastus, usu iisque necessitatibus ea. Dicat inciderint no duo,
+              purto vivendum perfecto qui cu, et nec erat possit evertitur.
+            </p>
+          </mat-card-content>
+    </div>
+    <div fxFlex="20"></div>
+    </div>
 </mat-card>
+
+<!--
+<mat-card class="card-demo">
+  <mat-card-title>Responsive Layout Directions</mat-card-title>
+  <mat-card-subtitle>Layout direction changes to 'column' for 'xs' or 'sm' viewport sizes:
+  </mat-card-subtitle>
+  <mat-card-content>
+    <div class="containerX">
+      <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex
+           class="coloredContainerX box">
+        <div fxFlex> I'm above on mobile, and to the left on larger devices.</div>
+        <div fxFlex> I'm below on mobile, and to the right on larger devices.</div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="card-demo">
+  <mat-card-title>'Flex' to Fill Row</mat-card-title>
+  <mat-card-subtitle>Simple row using "flex" on 3rd element to fill available main axis.
+  </mat-card-subtitle>
+  <mat-card-content>
+    <div class="containerX">
+      <div fxLayout="row" class="colored box"
+           style="cursor: pointer;">
+        <div fxFlex="20"> fxFlex="20"</div>
+        <div fxFlex="60"> fxFlex="60"</div>
+        <div fxFlex="20"> fxFlex="20"</div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+-->
