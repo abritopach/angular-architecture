@@ -77,6 +77,13 @@ Although design is not the main objective of this project I have decided to use 
     *               |- heroes.component.spec.ts
     *               |- heroes.component.ts
     *               |- heroes.module.ts
+    *      |- services/
+    *       |- heroes/
+    *           |- heroes.services.md
+    *           |- heroes.services.ts
+    *       |- side-nav/
+    *           |- side-nav.service.spec.ts
+    *           |- side-nav.service.ts
 
 ## Development server
 

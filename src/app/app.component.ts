@@ -3,6 +3,12 @@ import { MediaMatcher } from '@angular/cdk/layout';
 
 import { SideNavService } from './services/side-nav/side-nav.service';
 
+interface ROUTE {
+  icon?: string;
+  route?: string;
+  title?: string;
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -14,10 +20,15 @@ export class AppComponent implements OnInit, OnDestroy {
   sideNavSub;
 
   mobileQuery: MediaQueryList;
-
-  fillerNav = Array.from({length: 50}, (_, i) => `Nav Item ${i + 1}`);
-
   private mobileQueryListener: () => void;
+
+  customerRoutes: ROUTE[] = [
+    {
+      icon: 'people',
+      route: 'heroes',
+      title: 'Heroes',
+    }
+  ];
 
   constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, private sideNavService: SideNavService) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
