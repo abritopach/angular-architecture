@@ -2,9 +2,21 @@
     <!-- Header. -->
     <!--<app-header></app-header>-->
 
-    <main class="content">
-      <router-outlet></router-outlet>
-    </main>
+    <mat-sidenav-container class="example-sidenav-container">
+      <mat-sidenav #sidenav mode="over">
+      <!--<mat-sidenav #sidenav [mode]="mobileQuery.matches ? 'over' : 'side'"
+                  [fixedInViewport]="mobileQuery.matches">-->
+        <mat-nav-list>
+          <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">{{nav}}</a>
+        </mat-nav-list>
+      </mat-sidenav>
+
+      <mat-sidenav-content>
+          <main class="content">
+              <router-outlet></router-outlet>
+            </main>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
 
     <!-- Footer. -->
     <app-footer></app-footer>

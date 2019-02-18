@@ -4,3 +4,7 @@ footer {
     text-align: center;
     height: 64px;
 }
+
+.toolbar-spacer {
+    flex: 1 1 auto;
+}
