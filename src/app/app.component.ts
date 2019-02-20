@@ -1,7 +1,10 @@
 import { Component, ChangeDetectorRef, OnDestroy, ViewChild, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MediaMatcher } from '@angular/cdk/layout';
 
 import { SideNavService } from './services/side-nav/side-nav.service';
+
+import { AuthenticationService } from './services/core/authentication/authentication.service';
 
 interface ROUTE {
   icon?: string;
@@ -30,10 +33,23 @@ export class AppComponent implements OnInit, OnDestroy {
     }
   ];
 
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, private sideNavService: SideNavService) {
+  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, private sideNavService: SideNavService,
+              private authenticationService: AuthenticationService, private router: Router) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this.mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this.mobileQueryListener);
+
+    this.authenticationService.authenticationState.subscribe(state => {
+      if (state) {
+        console.log(state);
+        setTimeout(() => {
+          this.router.navigate(['heroes']);
+        }, 2000);
+
+      } else {
+        this.router.navigate(['login']);
+      }
+    });
   }
 
   ngOnInit() {
