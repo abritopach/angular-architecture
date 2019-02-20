@@ -25,7 +25,7 @@ export class AppComponent implements OnInit, OnDestroy {
   customerRoutes: ROUTE[] = [
     {
       icon: 'people',
-      route: 'heroes',
+      route: '/heroes',
       title: 'Heroes',
     }
   ];

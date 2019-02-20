@@ -7,11 +7,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MyCustomMaterialModule } from './ui/material/material.module';
 import { FooterComponent } from './common/components/footer/footer.component';
+import { LoginComponent } from './public/pages/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
