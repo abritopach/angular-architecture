@@ -28,6 +28,9 @@ Although design is not the main objective of this project I have decided to use 
     *   |- app-component.ts
     *   |- app.module.ts
     *   |- core/
+    *   |- guards/
+    *       |- auth.guard.spec.ts
+    *       |- auth.guard.ts
     *   |- ui/
     *       |- carousel/
     *          |- carousel.component.css
@@ -77,7 +80,18 @@ Although design is not the main objective of this project I have decided to use 
     *               |- heroes.component.spec.ts
     *               |- heroes.component.ts
     *               |- heroes.module.ts
-    *      |- services/
+    *   |- public/
+    *       |- pages/
+    *           |- login/
+    *               |- login.component.css
+    *               |- login.component.html
+    *               |- login.component.spec.ts
+    *               |- login.component.ts
+    *               |- login.module.ts
+    *   |- services/
+    *       |- authentication/
+    *           |- authentication.service.spec.ts
+    *           |- authentication.service.ts
     *       |- heroes/
     *           |- heroes.services.md
     *           |- heroes.services.ts
