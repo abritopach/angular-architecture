@@ -11,6 +11,12 @@
     </div>
 </app-header>
 
-<app-carousel [heroes]="heroes" *ngIf="showCarousel"></app-carousel>
 
-<app-heroes-list [heroes]="heroes" *ngIf="!showCarousel"></app-heroes-list>
+<div class="container">
+    <app-carousel [heroes]="heroes" *ngIf="showCarousel"></app-carousel>
+
+    <app-heroes-list [heroes]="heroes" *ngIf="!showCarousel"></app-heroes-list>
+</div>
+
+<!-- Footer. -->
+<app-footer></app-footer>
