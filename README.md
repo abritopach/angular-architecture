@@ -17,6 +17,14 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Although design is not the main objective of this project I have decided to use [Angular Material](https://material.angular.io/) and [Angular Flex Layout](https://github.com/angular/flex-layout).
 
+Technologies: Angular, Angular Material & Angular Flex Layout.
+
+![Technologies](readme_resources/technologies.png "Technologies")
+
+## App Example
+
+![App](readme_resources/app.gif "App")
+
 ## Project Architecture
 
 // TODO: Complete architecture. Status: under development.
