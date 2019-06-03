@@ -1,4 +1,4 @@
-import { Component, ChangeDetectorRef, OnDestroy, ViewChild, OnInit } from '@angular/core';
+import { Component, ChangeDetectorRef, OnDestroy, ViewChild, OnInit, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { MediaMatcher } from '@angular/cdk/layout';
 
@@ -19,7 +19,7 @@ interface ROUTE {
 })
 export class AppComponent implements OnInit, OnDestroy {
   title = 'angular-architecture';
-  @ViewChild('sidenav') sidenav;
+  @ViewChild('sidenav', { read: ElementRef, static: true }) sidenav;
   sideNavSub;
 
   mobileQuery: MediaQueryList;
@@ -53,7 +53,7 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    console.log(this.sidenav);
+    console.log('ngOnInit', this.sidenav);
     this.sideNavSub = this.sideNavService.openNav$.subscribe(() => this.sidenav.open());
   }
 

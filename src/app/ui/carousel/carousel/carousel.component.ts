@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-carousel',
@@ -11,7 +11,7 @@ export class CarouselComponent implements OnInit {
   @Input()
   heroes: any[] = [];
 
-  @ViewChild('slideshow') slideshow: any;
+  @ViewChild('slideshow', { read: ElementRef, static: true }) slideshow: any;
 
   constructor() { }
 
