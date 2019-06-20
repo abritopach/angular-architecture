@@ -5,6 +5,9 @@
         </button>
     </div>
     <div buttons-end>
+        <button mat-icon-button (click)="show3dCarousel = !show3dCarousel">
+            <mat-icon class="example-icon">swap_horizontal_circle</mat-icon>
+        </button>
         <button mat-icon-button (click)="showCarousel = !showCarousel">
             <mat-icon class="example-icon">perm_media</mat-icon>
         </button>
@@ -13,9 +16,12 @@
 
 
 <div class="container">
+
+    <st-3D-card-carousel [slides]="slides" [autoloop]="autoloop" *ngIf="show3dCarousel && slides.length !== 0"></st-3D-card-carousel>
+
     <app-carousel [heroes]="heroes" *ngIf="showCarousel"></app-carousel>
 
-    <app-heroes-list [heroes]="heroes" *ngIf="!showCarousel"></app-heroes-list>
+    <app-heroes-list [heroes]="heroes" *ngIf="!showCarousel && !show3dCarousel"></app-heroes-list>
 </div>
 
 <!-- Footer. -->

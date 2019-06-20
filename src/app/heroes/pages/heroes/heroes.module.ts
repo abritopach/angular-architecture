@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
@@ -29,6 +29,7 @@ CommonModule,
     FlexLayoutModule
   ],
   declarations: [HeroesComponent, HeroesListComponent, CarouselComponent],
-  entryComponents: [HeroesListComponent, CarouselComponent]
+  entryComponents: [HeroesListComponent, CarouselComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class HeroesPageModule {}
