@@ -1,3 +1,8 @@
 .container { 
     height: 100vh;
 }
+
+.load-button {
+    margin:0 auto;
+    display:block;
+}

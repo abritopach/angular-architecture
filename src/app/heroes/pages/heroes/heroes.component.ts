@@ -12,6 +12,7 @@ import { CardItem } from 'st-three-dimensional-card-carousel/dist/types/models/c
 export class HeroesComponent implements OnInit {
 
   heroes: any = [];
+  copyHeroes: any = [];
   showCarousel = false;
   slides: CardItem[] = [];
   autoloop = {
@@ -19,6 +20,8 @@ export class HeroesComponent implements OnInit {
     seconds: 2000
   };
   slidesColors = ['#1abc9c', '#e67e22', '#e74c3c', '#2c3e50', '#2980b9', '#9b59b6'];
+  start = 0;
+  end = 6;
 
   constructor(private heroesService: HeroesService, private sideNavService: SideNavService) { }
 
@@ -26,6 +29,7 @@ export class HeroesComponent implements OnInit {
 
   ngOnInit() {
     this.heroes = this.heroesService.getAllHeroes();
+    this.copyHeroes = this.heroes.slice(this.start, this.end);
     this.builtCarouselSlides();
   }
 
@@ -35,7 +39,7 @@ export class HeroesComponent implements OnInit {
 
   builtCarouselSlides() {
     console.log('HeroesComponent::builtCarouselSlides() | method called');
-    this.heroes.map((hero, index) => {
+    this.copyHeroes.map((hero, index) => {
       const cardItem: CardItem = {
         id: index,
         title: hero.name,
@@ -49,7 +53,29 @@ export class HeroesComponent implements OnInit {
       };
       this.slides.push(cardItem);
     });
-    console.log('slides', this.slides);
+  }
+
+  getCurrentSlides() {
+    if (this.start === this.heroes.length) {
+        this.start = 0;
+        this.end = 6;
+    }
+
+    this.start = this.end;
+    if ((this.start + this.end) < this.heroes.length) {
+      this.end = this.start + 6;
+    } else {
+      this.end = this.heroes.length - 1;
+    }
+
+    this.copyHeroes = this.heroes.slice(this.start, this.end);
+  }
+
+  loadMore() {
+    this.copyHeroes = [];
+    this.getCurrentSlides();
+    this.slides = [];
+    this.builtCarouselSlides();
   }
 
 }

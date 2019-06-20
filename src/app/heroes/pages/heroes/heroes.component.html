@@ -17,7 +17,10 @@
 
 <div class="container">
 
-    <st-3D-card-carousel [slides]="slides" [autoloop]="autoloop" *ngIf="show3dCarousel && slides.length !== 0"></st-3D-card-carousel>
+    <div *ngIf="show3dCarousel && slides.length !== 0">
+        <st-3D-card-carousel [slides]="slides" [autoloop]="autoloop"></st-3D-card-carousel>
+        <button class="load-button" mat-button mat-raised-button color="primary" (click)="loadMore()">Load more</button>
+    </div>
 
     <app-carousel [heroes]="heroes" *ngIf="showCarousel"></app-carousel>
 
